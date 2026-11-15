@@ -199,9 +199,9 @@
 	pinctrl-1 = <&i2c0_sleep>;
 	pinctrl-names = "default","sleep";
 	clock-frequency = <I2C_BITRATE_STANDARD>;
-	myaccel: lis2dh12@18 {
+	myafe: max30009@69 {
 		compatible = "i2c-device";
-		reg = <0x18>;
+		reg = <0x69>;
 	};
 };
 
@@ -263,7 +263,7 @@
 		has-dpd;                          // W25Q32 支持 DPD，保留该属性
 		t-enter-dpd = <300>;              // 进入 DPD 模式等待时间：0.3 微秒（µs，datasheet 规定最小 300ns）
 		t-exit-dpd = <10000>;             // 退出 DPD 模式等待时间：10 微秒（µs，需等待芯片唤醒稳定）
-		
+
 	};
 };
 
